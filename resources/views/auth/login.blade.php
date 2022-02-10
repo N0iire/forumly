@@ -1,7 +1,8 @@
 <x-base-layout>
-    <x-jet-authentication-card>
+
+    <x-jet-authentication-card >
         <x-slot name="logo">
-            <x-logos.main class="w-32" />
+            <x-logos.main class="w-40 mt-5 mx-32" />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -35,7 +36,7 @@
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                 <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+                    {{ __('Lupa password?') }}
                 </a>
                 @endif
 
@@ -45,4 +46,12 @@
             </div>
         </form>
     </x-jet-authentication-card>
+
+    <x-logos.avatar>
+
+    </x-logos.avatar>
+
+
+    
+    
 </x-base-layout>
