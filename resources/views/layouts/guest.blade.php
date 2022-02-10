@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <x-partials.head />
 </head>
@@ -28,7 +29,7 @@
 
     {{-- Livewire --}}
     <livewire:scripts />
-
+    @bukScripts(true)
 </body>
 
 </html>
