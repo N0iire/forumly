@@ -1,7 +1,7 @@
 @isset($user)
-<a href="{{ route('profile', $user) }}" class="flex flex-col items-center text-sm text-center transition border-2 border-transparent rounded-full focus:outline-none">
-    <img {{ $attributes->merge(['class' => 'object-cover w-16 h-16 rounded' ]) }} src="{{ $user->profile_photo_url }}" alt="{{ $user->name() }}" />
-    <span class="mt-2 text-xs text-gray-500">{{ $user->name() }}</span>
+<a href="{{ route('profile', $user) }}" class="flex mr-3 items-center text-sm text-center transition border-2 border-transparent rounded-full focus:outline-none">
+    <img {{ $attributes->merge(['class' => 'object-cover w-10 h-10 rounded-full' ]) }} src="{{ $user->profile_photo_url }}" alt="{{ $user->name() }}" />
+    <span class="mt-2 text-sm ml-2 pb-1 text-gray-700">{{ $user->name() }}</span>
 </a>
 @else
 <span class="inline-flex rounded-md">
