@@ -1,5 +1,5 @@
 @php
-$classes = 'text-blue-500 mt-4 uppercase font-semibold text-sm';
+$classes = 'text-gray-300 ml-2 w-full border-b-2 pb-2 border-gray-100 mb-4 text-md font-normal';
 @endphp
 
 <div>

@@ -36,7 +36,7 @@
         </tbody>
     </table>
     @else
-    You have no unread Notifications
+    Anda tidak memiliki Notifikasi yang belum dibaca
     @endif
 
 </div>
