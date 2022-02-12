@@ -5,7 +5,7 @@
             <x-partials.sidenav />
 
             <div class="flex flex-col col-span-3 gap-y-4">
-
+                anda harus login terlebih dahulu
             </div>
         </section>
     </main>
