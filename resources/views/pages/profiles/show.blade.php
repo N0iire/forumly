@@ -67,6 +67,8 @@
                     {{-- Thread --}}
                     <div class="relative col-span-7 space-y-6">
                         <div class="space-y-3">
+
+                            
                             <h2 class="text-xl tracking-wide hover:text-blue-400">
                                 {{ $thread->title() }}
                             </h2>

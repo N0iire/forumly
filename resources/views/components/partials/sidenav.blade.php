@@ -1,13 +1,20 @@
 <aside class="col-span-1 space-y-6 text-gray-600">
 
-    <div class="p-4 space-y-4 bg-white shadow">
-        <div>
+    <div class="p-4 space-y-4 bg-white shadow rounded-lg">
+        <div class=" pb-4 border-b">
             {{-- Start Discusson Button --}}
-            <a href="{{ route('threads.create') }}" class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-blue-500 border border-transparent rounded hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}>
-                {{ __('Start a new discussion') }}
+            <a href="{{ route('threads.create') }}" class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-yellow-500 border border-transparent rounded hover:bg-yellow-400 active:bg-yellow-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}>
+                {{ __('Buat diskusi baru') }}
             </a>
-        </div>
 
+            
+        </div>
+        <div class="pb-4 space-y-4">
+                        {{-- Subscribe to thread button --}}
+                        <p class="text-sm text-gray-500">
+                            Buat postingan baru untuk memulai topik.
+                        </p>
+                    </div>
         @auth
         @if(request()->routeIs('threads.show'))
         <div class="pb-4 space-y-4">
@@ -37,7 +44,7 @@
     </div>
 
     {{-- Categories --}}
-    <div class="p-4 space-y-4 bg-white shadow ">
+    <div class="p-4 space-y-4 bg-white shadow rounded-lg">
         <div class="pb-4 mb-4 border-b border-gray-200">
             <h2 class="font-bold uppercase">Categories</h2>
         </div>
@@ -76,7 +83,7 @@
         </ul>
     </div>
 
-    <div class="p-4 space-y-4 bg-white shadow">
+    <div class="p-4 space-y-4 bg-white shadow rounded-lg">
         <ul class="space-y-4 text-gray-500">
             <li>
                 <a href="#" class="flex items-center space-x-2">

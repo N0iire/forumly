@@ -1,15 +1,16 @@
-<article class="p-5 bg-white shadow">
+<article class="p-5 bg-white shadow rounded-lg">
 
-    <div class="relative grid grid-cols-8 gap-3">
+    <div class="relative grid grid-cols-8 gap-3 ">
 
         {{-- Avatar --}}
-        <div class="col-span-1">
-            <x-user.avatar :user="$thread->author()" />
-        </div>
+        
 
         {{-- Content --}}
         <div class="col-span-6 space-y-4">
-
+            <div class="col-span-1 mb-1">
+                  <x-user.avatar :user="$thread->author()" />
+             </div>
+                    
             <a href="{{ route('threads.show', [$thread->category->slug(), $thread->slug()]) }}" class="space-y-2">
                 <h2 class="text-xl tracking-wide hover:text-blue-400">
                     {{ $thread->title() }}
@@ -31,7 +32,7 @@
                 {{-- Comments Count --}}
                 <div class="flex items-center space-x-2">
                     <x-heroicon-o-chat-alt class="w-4 h-4 text-green-300" />
-                    <span class="text-xs text-gray-500">{{ count($thread->replies()) }}</span>
+                    <span class="text-xs text-gray-500">{{ count($thread->replies()) }} komentar</span>
                 </div>
 
                 {{-- Views Count --}}
