@@ -1,11 +1,11 @@
-<x-guest-layout>
+<x-base-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <x-logos.main class="w-32 mt-5" />
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+            {{ __('Lupa kata sandi Anda? Tidak masalah. Cukup beri tahu kami alamat email Anda dan kami akan mengirim email kepada Anda tautan pengaturan ulang kata sandi yang memungkinkan Anda memilih yang baru.') }}
         </div>
 
         @if (session('status'))
@@ -31,4 +31,12 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+    <div class="absolute center-0 left-0 ml-36">
+        <div class="flex flex-col z-0 items-center mt-20 pt-6  sm:overflow-hidden sm:justify-center sm:pt-0">
+     
+            <div class="relativew-full py-4 sm:max-w-md rounded-t-md">
+              <img src="{{ asset('img/avatars/forgot.svg') }}"  alt="">
+            </div>
+        </div>
+     </div>
+</x-base-layout>
