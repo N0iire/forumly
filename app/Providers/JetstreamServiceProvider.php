@@ -13,9 +13,14 @@ class JetstreamServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+    protected function registerComponent(string $component)
+    {
+        \Illuminate\Support\Facades\Blade::component('jetstream::components.' . $component, 'jet-' . $component);
+    }
     public function register()
     {
-        //
+        $this->registerComponent('button2');
     }
 
     /**

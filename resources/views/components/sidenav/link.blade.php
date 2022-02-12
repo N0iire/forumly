@@ -2,8 +2,8 @@
 
 @php
 $classes = ($active ?? false)
-? 'inline-flex space-x-3 items-center px-2 pt-2 text-sm font-medium leading-5 text-blue-400 focus:outline-none transition'
-: 'inline-flex space-x-3 items-center px-2 pt-2 text-sm font-medium leading-5 text-gray-500 transition hover:text-blue-400';
+? 'text-gray-600 rounded-lg bg-gray-50 dark:bg-gray-600 dark:text-gray-400 hover:bg-gray-100 flex items-center  p-2 my-4 transition-colors'
+: 'hover:text-gray-800 rounded-lg font-thin text-gray-500 dark:text-gray-400 hover:bg-gray-100 flex items-center  p-2 my-4 transition-colors';
 
 @endphp
 
