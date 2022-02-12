@@ -16,10 +16,10 @@
             {{-- Search Topic --}}
             <div class="flex items-center flex-grow">
 
-                <div class="p-2 text-white bg-blue-200 border rounded-l">
+                <div class="p-2 text-white bg-yellow-400 border rounded-l">
                     <x-heroicon-o-search class="w-6 h-6" />
                 </div>
-                <input type="search" name="" id="" class="w-full border-none rounded-r shadow-inner bg-blue-50 focus:ring-blue-200" placeholder="Search Topics">
+                <input type="search" name="" id="" class="w-full border-none rounded-r shadow-inner bg-yellow-50 focus:ring-yellow-200" placeholder="Cari Topik">
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -49,11 +49,11 @@
                         <x-slot name="content">
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+                                {{ __('Kelola Akun') }}
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('Profil') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -70,7 +70,7 @@
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Keluar') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
