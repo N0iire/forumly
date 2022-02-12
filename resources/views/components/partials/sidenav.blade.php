@@ -7,14 +7,14 @@
                 {{ __('Buat diskusi baru') }}
             </a>
 
-            
+
         </div>
         <div class="pb-4 space-y-4">
-                        {{-- Subscribe to thread button --}}
-                        <p class="text-sm text-gray-500">
-                            Buat postingan baru untuk memulai topik.
-                        </p>
-                    </div>
+            {{-- Subscribe to thread button --}}
+            <p class="text-sm text-gray-500">
+                Buat postingan baru untuk memulai topik.
+            </p>
+        </div>
         @auth
         @if(request()->routeIs('threads.show'))
         <div class="pb-4 space-y-4">
@@ -48,38 +48,15 @@
         <div class="pb-4 mb-4 border-b border-gray-200">
             <h2 class="font-bold uppercase">Categories</h2>
         </div>
-
         <ul class="space-y-4">
+            @foreach ($categories as $data)
             <li>
                 <a href="#" class="flex items-center justify-between">
-                    Category One
+                    {{$data->name}}
                     <span class="px-2 text-white bg-green-300 rounded">45</span>
                 </a>
             </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Two
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Three
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Four
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Five
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
+            @endforeach
         </ul>
     </div>
 

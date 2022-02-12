@@ -4,11 +4,13 @@ namespace App\Providers;
 
 use ViewContract;
 use App\Models\User;
+use App\Models\Category;
 use App\Models\View;
 use App\Models\Reply;
 use App\Models\Views;
 use App\Models\Thread;
 use App\Contracts\ViewsContract;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
@@ -34,6 +36,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->bootEloquentMorphsRelations();
+
+        view()->composer('components.partials.sidenav', function ($view) {
+            $view->with('categories', Category::all());
+        });
     }
 
     public function bootEloquentMorphsRelations()
