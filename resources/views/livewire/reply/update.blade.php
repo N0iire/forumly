@@ -11,20 +11,20 @@
 
         <div x-show="!editReply" class="relative">
 
-            <div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-blue-300 shadow">
+            <div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-blue-300 shadow rounded-lg">
                 <div class="grid grid-cols-8">
+                             
 
-                    {{-- Avatar --}}
-                    <div class="col-span-1">
-                        <x-user.avatar :user="$author" />
-                    </div>
-
-                    <div class="relative col-span-6 space-y-4">
+                    <div class="relative col-span-7 space-y-4">
+                         {{-- Avatar --}}
+                        <div class="col-span-1">
+                            <x-user.avatar :user="$author" />
+                        </div>
                         <p>
                             {{ $replyOrigBody }}
                         </p>
 
-                        <div class="absolute flex justify-between w-full bottom-1">
+                        <div class=" flex justify-between w-full bottom-1">
 
                             {{-- Likes --}}
                             <div class="flex space-x-5 text-gray-500">
@@ -34,14 +34,14 @@
                             {{-- Date Posted --}}
                             <div class="flex items-center text-xs text-gray-500">
                                 <x-heroicon-o-clock class="w-4 h-4 mr-1" />
-                                Replied: {{ $createdAt->diffForHumans() }}
+                                Dibalas: {{ $createdAt->diffForHumans() }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="absolute flex space-x-3 top-2 right-2">
+            <div class="absolute flex space-x-3 top-4 right-4">
                 @can(App\Policies\ReplyPolicy::UPDATE, App\Models\Reply::find($replyId))
                 <x-links.secondary x-on:click="editReply = true; $nextTick(() => focus())" class="cursor-pointer">
                     {{ __('Edit') }}

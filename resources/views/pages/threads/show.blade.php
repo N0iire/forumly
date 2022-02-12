@@ -9,7 +9,7 @@
 
             <small class="text-sm text-gray-400">Threads>{{ $category->name() }}>{{ $thread->title() }}</small>
 
-            <article class="p-5 bg-white shadow">
+            <article class="p-5 bg-white shadow rounded-lg">
                 <div class="relative grid grid-cols-8">
 
                     
@@ -71,7 +71,7 @@
 
             {{-- Replies --}}
             <div class="mt-6 space-y-5">
-                <h2 class="mb-0 text-sm font-bold uppercase">Replies</h2>
+                <h2 class="mb-0 text-sm font-bold uppercase">Komentar</h2>
                 <hr>
                 @foreach($thread->replies() as $reply)
                 <livewire:reply.update :reply="$reply" :wire:key="$reply->id()" />
@@ -79,11 +79,11 @@
             </div>
 
             @auth
-            <div class="p-5 space-y-4 bg-white shadow">
-                <h2 class="text-gray-500">Post a reply</h2>
+            <div class="p-5 space-y-4 bg-white shadow rounded-lg">
+                <h2 class="text-gray-500">Kirim komentar</h2>
                 <x-form action="{{ route('replies.store') }}">
                     <div>
-                        <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-blue-400" />
+                        <input type="text" name="body" class="w-full rounded-md bg-gray-200 border-none shadow-inner focus:ring-blue-400" />
                         <x-form.error for="body" />
 
                         <input type="hidden" name="replyable_id" value="{{ $thread->id() }}">
@@ -96,14 +96,14 @@
                     <div class="grid mt-4">
                         {{-- Button --}}
                         <x-buttons.primary class="justify-self-end">
-                            {{ __('Post') }}
+                            {{ __('Kirim') }}
                         </x-buttons.primary>
                     </div>
                 </x-form>
             </div>
             @else
             <div class="flex justify-between p-4 text-gray-700 bg-blue-200 rounded">
-                <h2>Please login to leave a comment</h2>
+                <h2>Anda harus login terlebih dahulu sebelum mengirim komentar</h2>
                 <a href="{{ route('login') }}">Login</a>
             </div>
             @endauth

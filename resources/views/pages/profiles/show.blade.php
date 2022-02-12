@@ -58,14 +58,14 @@
             <x-alerts.main />
 
             <span class="w-full p-2 font-bold text-blue-500 bg-white rounded shadow">
-                Latest Threads
+                Post Terbaru
             </span>
 
             @foreach($user->latestThreads() as $thread)
-            <article class="p-5 bg-white shadow">
+            <article class="p-5 bg-white shadow rounded-lg">
                 <div class="relative grid grid-cols-8">
                     {{-- Thread --}}
-                    <div class="relative col-span-7 space-y-6">
+                    <div class="relative col-span-7 space-y-6 ">
                         <div class="space-y-3">
                             <h2 class="text-xl tracking-wide hover:text-blue-400">
                                 {{ $thread->title() }}
