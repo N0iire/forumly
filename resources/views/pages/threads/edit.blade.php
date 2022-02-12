@@ -67,4 +67,5 @@
             </article>
         </section>
     </main>
+    @bukScripts(true)
 </x-guest-layout>
