@@ -12,14 +12,16 @@
             <article class="p-5 bg-white shadow">
                 <div class="relative grid grid-cols-8">
 
-                    {{-- Avatar --}}
-                    <div class="col-span-1">
-                        <x-user.avatar :user="$thread->author()" />
-                    </div>
+                    
+
 
                     {{-- Thread --}}
                     <div class="relative col-span-7 space-y-6">
                         <div class="space-y-3">
+                            {{-- Avatar --}}
+                            <div class="col-span-1">
+                                <x-user.avatar :user="$thread->author()" />
+                            </div>
                             <h2 class="text-xl tracking-wide hover:text-blue-400">
                                 {{ $thread->title() }}
                             </h2>
@@ -44,7 +46,7 @@
                             {{-- Date Posted --}}
                             <div class="flex items-center text-xs text-gray-500">
                                 <x-heroicon-o-clock class="w-4 h-4 mr-1" />
-                                Posted: {{ $thread->created_at->diffForHumans() }}
+                                Diposting: {{ $thread->created_at->diffForHumans() }}
                             </div>
                         </div>
 
