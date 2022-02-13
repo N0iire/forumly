@@ -4,7 +4,7 @@
     <x-partials.head />
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex flex-col min-h-screen">
 
     {{-- Header --}}
  
@@ -13,7 +13,7 @@
     <x-partials.nav />
 
     {{-- Slot --}}
-    <div class="mb-8 font-sans antialiased text-gray-900">
+    <div class="flex-auto mb-8 font-sans antialiased text-gray-900">
         {{ $slot }}
     </div>
 
