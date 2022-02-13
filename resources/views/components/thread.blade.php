@@ -3,14 +3,14 @@
     <div class="relative grid grid-cols-8 gap-3 ">
 
         {{-- Avatar --}}
-        
+
 
         {{-- Content --}}
         <div class="col-span-6 space-y-4">
             <div class="col-span-1 mb-1">
-                  <x-user.avatar :user="$thread->author()" />
-             </div>
-                    
+                <x-user.avatar :user="$thread->author()" />
+            </div>
+
             <a href="{{ route('threads.show', [$thread->category->slug(), $thread->slug()]) }}" class="space-y-2">
                 <h2 class="text-xl tracking-wide hover:text-blue-400">
                     {{ $thread->title() }}
@@ -54,11 +54,11 @@
         {{-- Tags --}}
         <div class="absolute right-2">
             <div class="flex space-x-2">
-                @foreach($thread->tags() as $tag)
-                <a href="{{ route('threads.tags.index', $tag->slug()) }}" class="p-1 text-xs text-white bg-green-400 rounded">
-                    {{ $tag->name() }}
+
+                <a href="" class="p-1 text-xs text-white bg-green-400 rounded">
+                    {{ $thread->category->name }}
                 </a>
-                @endforeach
+
             </div>
         </div>
     </div>
