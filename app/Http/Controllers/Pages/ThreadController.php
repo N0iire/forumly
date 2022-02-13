@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use App\Contracts\ViewsContract;
 use App\Models\Tag;
-use App\Models\Views;
+use Illuminate\Support\Facades\DB;
 use App\Models\Thread;
 use App\Models\Category;
 use App\Jobs\CreateThread;
@@ -17,6 +17,8 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Requests\ThreadStoreRequest;
 use App\Jobs\SubscribeToSubscriptionAble;
 use App\Jobs\UnsubscribeFromSubscriptionAble;
+use App\Models\Like;
+use Carbon\Carbon;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -111,6 +113,43 @@ class ThreadController extends Controller
             'threads'       => Thread::whereHas('category', function (Builder $q) use ($slug) {
                 $q->where('slug', '=', $slug);
             })->paginate(10),
+        ]);
+    }
+
+    public function thisWeek()
+    {
+        $threads = Thread::leftJoin('views', 'views.viewable_id', '=', 'threads.id')
+            ->selectRaw('threads.*, COUNT(views.viewable_id) AS view_count')
+            ->whereBetween('created_at', [Carbon::now()->subWeek()->format("Y-m-d H:i:s"), Carbon::now()])
+            ->groupBy('threads.id')
+            ->orderByDesc('view_count');
+
+        return view('pages.threads.index', [
+            'threads'       => $threads->paginate(10),
+        ]);
+    }
+
+    public function allTime()
+    {
+        $threads = Thread::leftJoin('views', 'views.viewable_id', '=', 'threads.id')
+            ->selectRaw('threads.*, COUNT(views.viewable_id) AS view_count')
+            ->groupBy('threads.id')
+            ->orderByDesc('view_count');
+
+        return view('pages.threads.index', [
+            'threads'       => $threads->paginate(10),
+        ]);
+    }
+
+    public function zeroComment()
+    {
+        $threads = Thread::leftJoin('replies', 'replies.replyable_id', '=', 'threads.id')
+            ->selectRaw('threads.*')
+            ->groupBy('threads.id')
+            ->whereNull('replies.replyable_id');
+
+        return view('pages.threads.index', [
+            'threads'       => $threads->paginate(10),
         ]);
     }
 }

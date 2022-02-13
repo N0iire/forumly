@@ -1,7 +1,6 @@
 <article class="p-5 bg-white shadow rounded-lg">
 
     <div class="relative grid grid-cols-8 gap-3 ">
-
         {{-- Avatar --}}
 
 

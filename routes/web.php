@@ -40,11 +40,11 @@ Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
     Route::get('/{category:slug}/{thread:slug}/subscribe', [ThreadController::class, 'subscribe'])->name('subscribe');
     Route::get('/{category:slug}/{thread:slug}/unsubscribe', [ThreadController::class, 'unsubscribe'])->name('unsubscribe');
     Route::get('/{category:slug}', [ThreadController::class, 'sortByCategory'])->name('sort');
-
-    Route::group(['as' => 'tags.'], function () {
-        Route::get('/{tag:slug}', [TagController::class, 'index'])->name('index');
-    });
 });
+
+Route::get('/popular/weeks', [ThreadController::class, 'thisWeek'])->name('weeks');
+Route::get('/popular/all', [ThreadController::class, 'allTime'])->name('all');
+Route::get('/no-replies', [ThreadController::class, 'zeroComment'])->name('no-replies');
 
 Route::group(['prefix' => 'replies', 'as' => 'replies.'], function () {
     /* Name: Replies
