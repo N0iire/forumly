@@ -54,11 +54,9 @@
         {{-- Tags --}}
         <div class="absolute right-2">
             <div class="flex space-x-2">
-
-                <a href="" class="p-1 text-xs text-white bg-green-400 rounded">
+                <a href="{{ route('threads.sort', $thread->category->slug) }}" class="p-1 text-xs text-white bg-green-400 rounded">
                     {{ $thread->category->name }}
                 </a>
-
             </div>
         </div>
     </div>

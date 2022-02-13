@@ -18,6 +18,7 @@ use App\Http\Requests\ThreadStoreRequest;
 use App\Jobs\SubscribeToSubscriptionAble;
 use App\Jobs\UnsubscribeFromSubscriptionAble;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
+use Illuminate\Database\Eloquent\Builder;
 
 class ThreadController extends Controller
 {
@@ -102,5 +103,14 @@ class ThreadController extends Controller
 
         return redirect()->route('threads.show', [$thread->category->slug(), $thread->slug()])
             ->with('success', 'You have been unsubscribed from this thread');
+    }
+
+    public function sortByCategory($slug)
+    {
+        return view('pages.threads.index', [
+            'threads'       => Thread::whereHas('category', function (Builder $q) use ($slug) {
+                $q->where('slug', '=', $slug);
+            })->paginate(10),
+        ]);
     }
 }
