@@ -7,7 +7,31 @@
 
             <x-alerts.main />
 
-            <small class="text-sm text-gray-400">Threads>{{ $category->name() }}>{{ $thread->title() }}</small>
+            
+            {{-- breadcrumbs --}}
+            <div class="flex items-center pb-2 overflow-y-auto whitespace-nowrap">
+                <span class="text-gray-600 dark:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                </span>
+        
+                <span class="mx-5 text-gray-500 dark:text-gray-300">
+                    <x-heroicon-s-chevron-right class="w-5 h-5" />
+                </span>
+        
+                <span class="text-gray-500 dark:text-gray-200 ">
+                    {{ $category->name() }}
+                </span>  
+
+                <span class="mx-5 text-gray-500 dark:text-gray-300">
+                    <x-heroicon-s-chevron-right class="w-5 h-5" />
+                </span>
+        
+                <span class="text-yellow-500 dark:text-gray-200 ">
+                    {{ $thread->title() }}
+                </span>  
+            </div>
 
             <article class="p-5 bg-white shadow rounded-lg">
                 <div class="relative grid grid-cols-8">
