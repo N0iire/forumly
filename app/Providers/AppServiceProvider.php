@@ -40,6 +40,10 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('components.partials.sidenav', function ($view) {
             $view->with('categories', Category::all());
         });
+
+        view()->composer('components.partials.sidenav', function ($view) {
+            $view->with('threads', Thread::all());
+        });
     }
 
     public function bootEloquentMorphsRelations()

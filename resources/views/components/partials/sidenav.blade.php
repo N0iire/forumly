@@ -51,9 +51,12 @@
         <ul class="space-y-4">
             @foreach ($categories as $data)
             <li>
-                <a href="#" class="flex items-center justify-between">
+                <a href="{{ route('threads.sort', $data->slug) }}" class="flex items-center justify-between">
                     {{$data->name}}
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
+                    <span class="px-2 text-white bg-green-300 rounded">
+                        @php ($slug = $data->slug)
+                        {{ $count = App\Models\Thread::whereHas('category', function (Illuminate\Database\Eloquent\Builder $q) use($slug) {$q->where('slug', '=', $slug);})->count()}}
+                    </span>
                 </a>
             </li>
             @endforeach
