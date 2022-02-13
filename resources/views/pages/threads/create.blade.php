@@ -49,17 +49,6 @@
                                     <x-form.error for="category" />
                                 </div>
 
-                                {{-- Tags --}}
-                                <div>
-                                    <x-form.label for="tags" value="{{ __('Tags') }}" />
-                                    <select name="tags[]" id="tags" x-data="{}" x-init="function () { choices($el) }" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" multiple>
-                                        @foreach ($tags as $tag)
-                                        <option value="{{ $tag->id() }}">{{ $tag->name() }}</option>
-                                        @endforeach
-                                    </select>
-                                    <x-form.error for="tags" />
-                                </div>
-
                                 {{-- Body --}}
                                 <div>
                                     <x-form.label for="body" value="{{ __('Deskripsi') }}" />
