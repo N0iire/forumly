@@ -4,7 +4,7 @@
         <aside class="flex flex-col items-center h-full p-4 space-y-4  rounded-lg">
 
             <div class="shadow-lg rounded-2xl w-72 bg-white dark:bg-gray-800">
-                <img class="rounded-t-lg h-28 w-full mb-4 bg-yellow-500"/>
+                <x-logos.bg class="rounded-t-lg h-28 w-full mb-4 "/>
                 <div class="flex flex-col items-center justify-center p-4 -mt-16">
                     <a href="#" class="block relative">
                         
@@ -98,7 +98,7 @@
                             {{-- Date Posted --}}
                             <div class="flex items-center text-xs text-gray-500">
                                 <x-heroicon-o-clock class="w-4 h-4 mr-1" />
-                                Posted: {{ $thread->created_at->diffForHumans() }}
+                                Diposting: {{ $thread->created_at->diffForHumans() }}
                             </div>
                         </div>
 

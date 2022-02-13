@@ -1,7 +1,7 @@
-<footer class="p-5 bg-yellow-500">
-    <div class="text-white wrapper">
+<footer class="p-4 bg-gray-700">
+    <div class="text-white  ">
         <span>
-            &copy Copyright 2021
+            Forumly &copy Copyright 2022
         </span>
     </div>
 </footer>
