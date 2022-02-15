@@ -3,30 +3,30 @@
     {{-- Header --}}
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight">
-            {{ __('Users') }}
+            {{ __('Pengguna') }}
         </h2>
     </x-slot>
 
     <section class="px-6">
-        <div class="overflow-hidden border-b border-gray-200">
+        <div class="overflow-hidden border border-gray-100 rounded-md">
             <table class="min-w-full">
-                <thead class="bg-blue-500">
+                <thead class="rounded-lg" style="background-color:#FC9B5C; ">
                     <tr>
-                        <x-table.head>Name</x-table.head>
-                        <x-table.head>Bio</x-table.head>
+                        <x-table.head>Nama</x-table.head>
+                        <x-table.head>Email</x-table.head>
                         <x-table.head>Birthday</x-table.head>
                         <x-table.head class="text-center">Role</x-table.head>
-                        <x-table.head class="text-center">Joined Date</x-table.head>
+                        <x-table.head class="text-center">Tanggal Bergabung</x-table.head>
                     </tr>
                 </thead>
 
                 <tbody class="divide-y divide-gray-200 divide-solid">
                     <tr>
                         <x-table.data>
-                            <div>John Doe</div>
+                            <div class="overflow-hidden">Angga Cahya Abadi</div>
                         </x-table.data>
                         <x-table.data>
-                            <div>Some description of bio....</div>
+                            <div>angzai@gmail.com</div>
                         </x-table.data>
                         <x-table.data>
                             <div>date</div>

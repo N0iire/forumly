@@ -10,7 +10,7 @@
                         
                         <a href="{{ route('profile', $user) }}" class="flex flex-col items-center text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
                             <img class="object-cover w-16 h-16 rounded-full" src="{{ $user->profile_photo_url }}" alt="{{ $user->name() }}" />
-                            <span class="text-gray-800 dark:text-white text-xl font-medium mt-2">{{ $user->name() }}</span>
+                            <span class="flex text-gray-800 dark:text-white text-xl font-medium mt-2">{{ $user->name() }} </span>
                         </a>
                     </a>
                    
