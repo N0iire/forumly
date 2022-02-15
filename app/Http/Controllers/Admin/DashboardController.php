@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Active;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\IsAdmin;
@@ -17,5 +18,13 @@ class DashboardController extends Controller
     public function index()
     {
         return view('admin.dashboard.index');
+    }
+
+    public function getActiveUser()
+    {
+        $users = Active::users()->get();
+        
+        dd($users);
+        return view('admin.dashboard.index', ['users' => $users]);
     }
 }

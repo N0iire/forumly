@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\DashboardController;
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     // Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('index');
+    Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
+        Route::get('active', [DashboardController::class, 'getActiveUser'])->name('active');
+    });
 
     /* Name: Categories
      * Url: /admin/categories

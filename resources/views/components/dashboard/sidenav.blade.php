@@ -14,7 +14,7 @@
 
             @if(auth()->user()->isAdmin())
             <div>
-                <x-sidenav.link href="{{ route('users') }}" :active="request()->routeIs('users')">
+                <x-sidenav.link href="{{ route('admin.users.active') }}" :active="request()->routeIs('admin.users.active')">
                     <x-zondicon-user-group class="w-3  ml-2 mr-3" style="color:#FC9B5C;"/>
                     <span>{{ __('Pengguna') }}</span>
                 </x-sidenav.link>
