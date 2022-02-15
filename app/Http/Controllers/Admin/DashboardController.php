@@ -24,7 +24,6 @@ class DashboardController extends Controller
     {
         $users = Active::users()->get();
         
-        dd($users);
-        return view('admin.dashboard.index', ['users' => $users]);
+        return view('admin.users.index', ['users' => $users]);
     }
 }

@@ -14,32 +14,46 @@
                     <tr>
                         <x-table.head>Nama</x-table.head>
                         <x-table.head>Email</x-table.head>
-                        <x-table.head>Birthday</x-table.head>
+                        <x-table.head>Bio</x-table.head>
                         <x-table.head class="text-center">Role</x-table.head>
                         <x-table.head class="text-center">Tanggal Bergabung</x-table.head>
                     </tr>
                 </thead>
 
                 <tbody class="divide-y divide-gray-200 divide-solid">
+                    @foreach ($users as $activity)
                     <tr>
-                        <x-table.data>
-                            <div class="overflow-hidden">Angga Cahya Abadi</div>
-                        </x-table.data>
-                        <x-table.data>
-                            <div>angzai@gmail.com</div>
-                        </x-table.data>
-                        <x-table.data>
-                            <div>date</div>
-                        </x-table.data>
-                        <x-table.data>
-                            <div class="px-2 py-1 text-center text-gray-700 bg-green-200 rounded">
-                                Moderator
-                            </div>
-                        </x-table.data>
-                        <x-table.data>
-                            <div class="text-center">2005-14-06</div>
-                        </x-table.data>
+                            <x-table.data>
+                                <div class="overflow-hidden">{{ $activity->user->name }}</div>
+                            </x-table.data>      
+                            <x-table.data>
+                                <div class="overflow-hidden">{{ $activity->user->email }}</div>
+                            </x-table.data>
+                            <x-table.data>
+                                <div class="overflow-hidden">{{ $activity->user->bio }}</div>
+                            </x-table.data>
+                            <x-table.data>
+                                <div class="overflow-hidden">
+                                    @php
+                                        $i = $activity->user->type;
+                                    @endphp
+                                    @switch($i)
+                                        @case(1)
+                                            Default
+                                            @break
+                                        @case(3)
+                                            Admin
+                                        @break
+                                        @default
+                                            Guest
+                                    @endswitch
+                                </div>
+                            </x-table.data>
+                            <x-table.data>
+                                <div class="overflow-hidden">{{ $activity->user->email_verified_at }}</div>
+                            </x-table.data>        
                     </tr>
+                    @endforeach
                 </tbody>
 
             </table>
