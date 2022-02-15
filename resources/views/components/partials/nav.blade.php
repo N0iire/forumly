@@ -16,6 +16,7 @@
             {{-- Search Topic --}}
             <form class="flex w-8/12 ml-5" action="">
             <div class="flex items-center flex-grow ">             
+                {{-- Route/Http : route('search', 1) --}}             
                 <button class="p-2 text-white bg-yellow-400 border rounded-l focus:outline-none hover:bg-yellow-500">
                     <x-heroicon-o-search class="w-6 h-6" />
                 </button>
