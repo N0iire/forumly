@@ -7,7 +7,7 @@
             <div class="flex  col-span-3">
                 <div class="max-w-3xl mx-auto text-center">
                     <x-logos.login-avt class="w-80"/>
-                    <p class="mt-3 text-3xl text-base text-gray-600 leading-7 sm:mt-4 ">
+                    <p class="mt-3 text-3xl text-gray-600 leading-7 sm:mt-4 ">
                         Anda harus login terlebih dahulu
                     </p>
                 </div>     

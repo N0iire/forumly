@@ -22,10 +22,10 @@
             @can(App\Policies\ThreadPolicy::UNSUBSCRIBE, $thread)
             {{-- Unubscribe to thread button --}}
             <x-links.main href="{{ route('threads.unsubscribe', [$thread->category->slug(), $thread->slug()]) }}">
-                {{ __('Unsubscribe to Thread') }}
+                {{ __('Berhenti berlangganan') }}
             </x-links.main>
             <p class="text-sm text-gray-500 ">
-                Batal Berlangganan ke topik ini.
+                Berhenti Berlangganan ke topik ini.
             </p>
 
             @elsecan(App\Policies\ThreadPolicy::SUBSCRIBE, $thread)

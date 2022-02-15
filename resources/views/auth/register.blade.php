@@ -1,5 +1,5 @@
 <x-base-layout>
-    <x-jet-authentication-card>
+    <x-jet-authentication-card2>
         <x-slot name="logo">
             <x-logos.main class="w-32" />
         </x-slot>
@@ -10,8 +10,8 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block w-full mt-1" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-label for="name" value="{{ __('Nama') }}" />
+                <x-jet-input id="name" class="block w-80 mt-1" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Konfirmasi Password') }}" />
                 <x-jet-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -48,13 +48,17 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Sudah punya akun?') }}
                 </a>
 
                 <x-buttons.primary class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Daftar') }}
                 </x-buttons.primary>
             </div>
         </form>
-    </x-jet-authentication-card>
+    </x-jet-authentication-card2>
+
+    <x-logos.register-avt>
+
+    </x-logos.avatar>
 </x-base-layout>
