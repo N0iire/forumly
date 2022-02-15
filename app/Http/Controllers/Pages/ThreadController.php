@@ -153,8 +153,14 @@ class ThreadController extends Controller
         ]);
     }
 
-    public function search($suggest)
+    public function search(Request $request)
     {
-        dd($suggest);
+        $threads = Thread::where('title', 'LIKE', '%'.$request->search.'%')
+            ->orWhere('slug', 'LIKE', '%'.$request->search.'%')
+            ->orWhere('body', 'LIKE', '%'.$request->search.'%');
+
+        return view('pages.threads.index', [
+            'threads'       => $threads->paginate(10),
+        ]);
     }
 }
