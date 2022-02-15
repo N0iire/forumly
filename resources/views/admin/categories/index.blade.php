@@ -3,23 +3,29 @@
     {{-- Header --}}
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight">
-            {{ __('Categories') }}
+            {{ __('Kategori') }}
         </h2>
     </x-slot>
 
-    <section class="px-6">
-        <div class="overflow-hidden border-b border-gray-200">
+    <section class="px-6" style="thead tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+    thead tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+    
+    tbody tr td:first-child { border-top-left-radius: 5px; border-bottom-left-radius: 0px;}
+    tbody tr td:last-child { border-top-right-radius: 5px; border-bottom-right-radius: 0px;}
+    ">
+        <div class="overflow-hidden table-auto border border-gray-100 rounded-md">
             <table class="min-w-full">
-                <thead class="bg-blue-500">
-                    <tr>
+         
+                <thead style="border-radius:6px;">
+                    <tr class=" text-sm font-medium bg-gray-300 text-left" style="background-color:#FC9B5C; ">
                         <x-table.head>Id</x-table.head>
-                        <x-table.head>Name</x-table.head>
+                        <x-table.head>Nama</x-table.head>
                         <x-table.head>Slug</x-table.head>
-                        <x-table.head class="text-center">Created At</x-table.head>
-                        <x-table.head class="text-center">Actions</x-table.head>
+                        <x-table.head class="text-center">Dibuat pada</x-table.head>
+                        <x-table.head class="text-center">Aksi</x-table.head>
                     </tr>
                 </thead>
-
+           
                 <tbody class="divide-y divide-gray-200 divide-solid">
                     @foreach ($categories as $category)
                     <tr>

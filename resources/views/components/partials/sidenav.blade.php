@@ -25,16 +25,16 @@
                 {{ __('Unsubscribe to Thread') }}
             </x-links.main>
             <p class="text-sm text-gray-500 ">
-                Unsubscribe from this thread.
+                Batal Berlangganan ke topik ini.
             </p>
 
             @elsecan(App\Policies\ThreadPolicy::SUBSCRIBE, $thread)
             {{-- Subscribe to thread button --}}
             <x-links.main href="{{ route('threads.subscribe', [$thread->category->slug(), $thread->slug()]) }}">
-                {{ __('Subscribe to Thread') }}
+                {{ __('Berlangganan topik ini') }}
             </x-links.main>
             <p class="text-sm text-gray-500 ">
-                Subscribe to this thread.
+                Berlangganan ke topik ini.
             </p>
             @endcan
 
@@ -46,7 +46,7 @@
     {{-- Categories --}}
     <div class="p-4 space-y-4 bg-white shadow rounded-lg">
         <div class="pb-4 mb-4 border-b border-gray-200">
-            <h2 class="font-bold uppercase">Categories</h2>
+            <h2 class="font-bold uppercase">Kategori</h2>
         </div>
         <ul class="space-y-4">
             @foreach ($categories as $data)
@@ -68,19 +68,19 @@
             <li>
                 <a href="{{ '/popular/weeks' }}" class="flex items-center space-x-2">
                     <x-heroicon-s-star class="w-5 h-5 text-yellow-500" />
-                    <span>Popular this week</span>
+                    <span>Populer minggu ini</span>
                 </a>
             </li>
             <li>
                 <a href="{{ '/popular/all' }}" class="flex items-center space-x-2">
                     <x-heroicon-s-fire class="w-5 h-5 text-red-600" />
-                    <span>Popular all time</span>
+                    <span>Populer sepanjang waktu</span>
                 </a>
             </li>
             <li>
                 <a href="{{ '/no-replies' }}" class="flex items-center space-x-2">
                     <x-heroicon-s-chat class="w-5 h-5 text-blue-400" />
-                    <span>No replies yet</span>
+                    <span>Belum ada balasan</span>
                 </a>
             </li>
         </ul>
