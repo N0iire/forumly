@@ -42,11 +42,12 @@ Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
     Route::get('/{category:slug}', [ThreadController::class, 'sortByCategory'])->name('sort');
 });
 
+Route::get('/search', [ThreadController::class, 'search'])->name('search');
+
 Route::get('/popular/weeks', [ThreadController::class, 'thisWeek'])->name('weeks');
 Route::get('/popular/all', [ThreadController::class, 'allTime'])->name('all');
 Route::get('/no-replies', [ThreadController::class, 'zeroComment'])->name('no-replies');
 
-Route::get('search/{$search}', [ThreadController::class, 'search'])->name('search');
 Route::group(['prefix' => 'replies', 'as' => 'replies.'], function () {
     /* Name: Replies
      * Url: /replies/*
