@@ -14,7 +14,6 @@
                     <tr>
                         <x-table.head>Nama</x-table.head>
                         <x-table.head>Email</x-table.head>
-                        <x-table.head>Bio</x-table.head>
                         <x-table.head class="text-center">Role</x-table.head>
                         <x-table.head class="text-center">Tanggal Bergabung</x-table.head>
                     </tr>
