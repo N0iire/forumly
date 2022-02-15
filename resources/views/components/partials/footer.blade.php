@@ -5,9 +5,12 @@
         </span>
     </div>
 </footer>
+
+@livewireScripts
+
 <script>
     var myform = document.getElementById("searchForm");
-    document.getElementById("searchButton").addEventListener("click", function () {
+    document.getElementById("searchButton").addEventListener("click", function() {
         myform.submit();
     });
 </script>

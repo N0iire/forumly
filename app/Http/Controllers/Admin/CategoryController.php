@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
+use App\Models\Thread;
 
 class CategoryController extends Controller
 {
@@ -62,10 +63,13 @@ class CategoryController extends Controller
     }
 
 
-    public function destroy(Category $category)
+    public function destroy($slug)
     {
-        $category->delete();
+        $category_id = Category::select('*')->where('slug', $slug)->first();
 
+        Thread::select('category_id')->where('category_id', $category_id->id)->delete();
+        Category::select('*')->where('id', $category_id->id)->delete();
+        
         return redirect()->route('admin.categories.index')->with('success', 'Category Deleted');
     }
 }
