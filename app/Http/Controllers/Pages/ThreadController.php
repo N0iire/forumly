@@ -152,4 +152,9 @@ class ThreadController extends Controller
             'threads'       => $threads->paginate(10),
         ]);
     }
+
+    public function search($suggest)
+    {
+        dd($suggest);
+    }
 }
