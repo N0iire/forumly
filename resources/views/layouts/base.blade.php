@@ -4,10 +4,10 @@
     <x-partials.head />
 </head>
 
-<body class="relative overflow-hidden bg-blue-500">
+<body class="relative overflow-hidden bg-gray-100">
 
     <div class="absolute z-10 w-full opacity-10">
-        <img src="{{ asset('img/bg/bg-header.jpg') }}" alt="" class="object-cover w-full max-h-screen">
+        <img src="{{ asset('img/bg/') }}" alt="" class="object-cover w-full max-h-screen">
     </div>
 
 

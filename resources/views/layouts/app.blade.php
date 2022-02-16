@@ -31,7 +31,7 @@
             {{-- Sidenav --}}
             <x-dashboard.sidenav />
 
-            <div class="col-span-7">
+            <div class="col-span-7 ml-14">
                 <!-- Page Heading -->
                 @if (isset($header))
                 <header class="mx-6 mt-6 text-gray-600 shadow bg-blue-50">
