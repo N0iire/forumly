@@ -20,8 +20,10 @@
 <link rel="stylesheet" href="{{ asset('css/choices.css') }}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+<!-- ANJG -->
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
+
 
 {{-- Livewire --}}
 <livewire:styles />
