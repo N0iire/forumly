@@ -4,15 +4,15 @@
     <x-partials.head />
 </head>
 
-<body class="relative overflow-hidden bg-gray-50">
+<body class="relative overflow-hidden bg-blue-500">
 
     <div class="absolute z-10 w-full opacity-10">
-        <img src="{{ asset('img/bg/') }}" alt="" class="object-cover w-full max-h-screen">
+        <img src="{{ asset('img/bg/bg-header.jpg') }}" alt="" class="object-cover w-full max-h-screen">
     </div>
 
 
     {{-- Slot --}}
-    <div class="relative  mb-8 font-sans antialiased text-gray-900">
+    <div class="relative z-50 mb-8 font-sans antialiased text-gray-900">
         {{ $slot }}
     </div>
 

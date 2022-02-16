@@ -6,8 +6,6 @@
     </div>
 </footer>
 
-@livewireScripts
-
 <script>
     var myform = document.getElementById("searchForm");
     document.getElementById("searchButton").addEventListener("click", function() {
