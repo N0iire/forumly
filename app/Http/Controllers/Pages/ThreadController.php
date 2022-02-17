@@ -87,7 +87,7 @@ class ThreadController extends Controller
         return redirect()->route('threads.index')->with('success', 'Thread Updated!');
     }
 
-    public function subscribe(Request $request, Category $category, Thread $thread)
+    public function subscribe(Request $request, Thread $thread)
     {
         $this->authorize(ThreadPolicy::SUBSCRIBE, $thread);
 
@@ -97,7 +97,7 @@ class ThreadController extends Controller
             ->with('success', 'You have been subscribed to this thread');
     }
 
-    public function unsubscribe(Request $request, Category $category, Thread $thread)
+    public function unsubscribe(Request $request, Thread $thread)
     {
         $this->authorize(ThreadPolicy::UNSUBSCRIBE, $thread);
 
