@@ -43,15 +43,23 @@ This section should list any major frameworks/libraries used to bootstrap your p
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 
-2. Clone repo
+1. Clone repo
    ```sh
    git clone https://github.com/saikocode/forumly.git
    ```
-3. Install Laravel
+2. Install Laravel
    ```sh
    composer install
    ```
-4. Enter your API in `config.js`
+3. Copy file `.env.example` lalu ubah menjadi `.env` buka lalu ubah
+   ```DB_CONNECTION=mysql
+      DB_HOST=127.0.0.1
+      DB_PORT=3306
+      DB_DATABASE=forumly
+      DB_USERNAME=root
+      DB_PASSWORD=';
+   ```
+4. Ubah file `.env.example` menjadi `.env` lalu buka
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
