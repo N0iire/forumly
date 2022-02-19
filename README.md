@@ -59,9 +59,11 @@ _Below is an example of how you can instruct your audience on installing and set
       DB_USERNAME=root
       DB_PASSWORD=';
    ```
-4. Ubah file `.env.example` menjadi `.env` lalu buka
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Buka terminal lalu jalankan perintah ini untuk melakukan key generate
+   ```php artisan key:generate
+   ```
+5. Import database
+   ```php artisan migrate:fresh --seed
    ```
 
 ## License
