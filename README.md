@@ -20,7 +20,17 @@ Pada aplikasi forumly ini terdapat fitur :
 - kelola post(admin)
 - kelola komentar(admin)
 
-Forumly dibuat menggunakan framework Laravel dengan BladeUI kit dan Jetstream </br>
+
+### Dibuat Dengan
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+
+* [Laravel](https://laravel.com)
+* [Tailwind](https://getbootstrap.com)
+* [AlpineJS](https://alpinejs.dev/)
+* [Jetstream](https://jetstream.laravel.com/2.x/introduction.html)
+
 
 <a href="https://cdnlogo.com/logo/laravel_40397.html"><img src="https://cdn.cdnlogo.com/logos/l/23/laravel.svg" width="100" height="100"></a>
 <a href="https://cdnlogo.com/logo/tailwindcss_42966.html"><img src="https://cdn.cdnlogo.com/logos/t/58/tailwindcss.svg" width="100" height="100"></a>
