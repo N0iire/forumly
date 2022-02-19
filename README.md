@@ -65,6 +65,9 @@ Pada aplikasi forumly ini terdapat fitur :
    ```sh
    php artisan migrate:fresh --seed
    ```
+5. Jalankan server
+   ```sh
+   php artisan serve
 
 ## License
 
