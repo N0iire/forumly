@@ -52,7 +52,8 @@ _Below is an example of how you can instruct your audience on installing and set
    composer install
    ```
 3. Copy file `.env.example` lalu ubah menjadi `.env` buka lalu ubah
-   ```DB_CONNECTION=mysql
+   ```sh
+      DB_CONNECTION=mysql
       DB_HOST=127.0.0.1
       DB_PORT=3306
       DB_DATABASE=forumly
@@ -60,10 +61,12 @@ _Below is an example of how you can instruct your audience on installing and set
       DB_PASSWORD=';
    ```
 4. Buka terminal lalu jalankan perintah ini untuk melakukan key generate
-   ```php artisan key:generate
+   ```sh
+   php artisan key:generate
    ```
 5. Import database
-   ```php artisan migrate:fresh --seed
+   ```sh
+   php artisan migrate:fresh --seed
    ```
 
 ## License
