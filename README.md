@@ -6,19 +6,18 @@
 
 Forumly adalah forum online berbasis web yang ditujukan untuk para mahasiswa sebagai sarana untuk berdiskusi dan bertukar pikiran. Forumly juga memudahkan para mahasiswa untuk berbagi ilmu dan pengalaman. Aplikasi ini dibuat sebagai salah satu tugas besar untuk memenuhi nilai UAS mata kuliah Rekayasa Perangkat Lunak II.
 Pada aplikasi forumly ini terdapat fitur :
-- kirim post
-- komentar
-- sukai post
-- subscibe
-- cari post
-- pengaturan profil : edit foto, nama, email, password
-- list post populer
-- logout browser session
-- follow user
-- melihat pengguna aktif (admin)
-- kelola kategori(admin)
-- kelola post(admin)
-- kelola komentar(admin)
+- Login
+- Register
+- Membuat diskusi
+- Mengelola postingan (menyunting dan menghapus)
+- Menyukai diskusi
+- Berlangganan dengan suatu topik diskusi
+- Membuat komentar
+- Mengikuti akun user lain
+- Mencari topik diskusi
+- Mengatur profil pribadi
+- Menyediakan fitur khusus untuk admin berupa membuat kategori, melihat user active, dan mengelola seluruh threads user
+
 
 
 ### Dibuat Dengan
