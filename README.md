@@ -1,4 +1,4 @@
-<p align="center"><a href="https:/" target="_blank"><img src="public/img/logo/logo.svg" width="400"></a></p>
+<p align="center"><a href="https://github.com/saikocode/forumly" target="_blank"><img src="public/img/logo/logo.svg" width="400"></a></p>
 
 
 ## Tentang Forumly
