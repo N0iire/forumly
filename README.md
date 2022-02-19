@@ -68,6 +68,15 @@ Pada aplikasi forumly ini terdapat fitur :
 5. Jalankan server
    ```sh
    php artisan serve
+   ```
+## Anggota IF3_TimTahuBulat
+10119091 - Muhammad Rojabi Nur Fauzi
+10119097 - Ikhsan Nurul Rizki
+10119118 - Rizky Septiana Abdul Razak
+10119120 - Reichan Muhamad Maulana
+10119123 - Angga Cahya Abadi
+10119124 - Primarazaq Noorsalih Putra Hilmana
+
 
 ## License
 
